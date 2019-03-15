@@ -342,7 +342,8 @@ export class DndDropzoneDirective implements AfterViewInit, OnDestroy {
 
     // early exit if no direct child or direct child is placeholder
     if( directChild === null
-      || directChild === this.placeholder ) {
+      || directChild === this.placeholder
+      || directChild.nextSibling === this.placeholder ) {
 
       return;
     }
